@@ -9,7 +9,7 @@ A realtime good looking customizable battery indicator for all platforms.
 
 It can detect if the device is charging or not and can turn battery level to red colour if battery level is less than 20%. More customizations are coming soon.
 
-![Charging](https://raw.githubusercontent.com/mantreshkhurana/realtime_battery_indicator/stable/screenshots/charging.gif)
+<kbd>![Charging](https://raw.githubusercontent.com/mantreshkhurana/realtime_battery_indicator/stable/screenshots/charging.gif)</kbd>
 
 ## Installation
 
