@@ -7,13 +7,17 @@ A realtime good looking customizable battery indicator for all platforms.
 
 ![Screenshot](https://raw.githubusercontent.com/mantreshkhurana/realtime_battery_indicator/stable/screenshots/screenshot-1.png)
 
+It can detect if the device is charging or not and can turn battery level to red colour if battery level is less than 20%. More customizations are coming soon.
+
+![Charging](https://raw.githubusercontent.com/mantreshkhurana/realtime_battery_indicator/stable/screenshots/charging.gif)
+
 ## Installation
 
-Add `realtime_battery_indicator: ^1.0.0` in your project's pubspec.yaml:
+Add `realtime_battery_indicator: ^1.0.1` in your project's pubspec.yaml:
 
 ```yaml
 dependencies:
-  realtime_battery_indicator: ^1.0.0
+  realtime_battery_indicator: ^1.0.1
 ```
 
 ## Usage
@@ -23,10 +27,6 @@ Import `realtime_battery_indicator` in your dart file:
 ```dart
 import 'package:realtime_battery_indicator/realtime_battery_indicator.dart';
 ```
-
-Then use `checkAppUpdate` in your code:
-
-> checkAppUpdate function won't show any dialog in iOS Simulator. [Source](https://stackoverflow.com/questions/13645554/itunes-app-link-cannot-open-page-in-safari-in-simulator-and-also-idevices)
 
 ### Default Usage
 
