@@ -59,12 +59,28 @@ Widget getBatteryLevel() {
   );
 }
 
+/// [BatteryIndicator] is a widget that displays the battery level and status.
 class BatteryIndicator extends StatefulWidget {
+  /// [showBatteryLevel] is a boolean that determines whether to show the battery level.
   final bool showBatteryLevel;
+
+  /// [textStyle] is a TextStyle that determines the style of the battery level.
+  final TextStyle textStyle;
+
+  /// [size] is a double that determines the size of the battery indicator.
+  final double size;
+
+  final Duration duration;
 
   const BatteryIndicator({
     super.key,
     this.showBatteryLevel = true,
+    this.textStyle = const TextStyle(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w600,
+    ),
+    this.size = 12.0,
+    this.duration = const Duration(milliseconds: 300),
   });
 
   @override
@@ -119,10 +135,7 @@ class _BatteryIndicatorState extends State<BatteryIndicator> {
               widget.showBatteryLevel
                   ? Text(
                       '${snapshot.data}%',
-                      style: const TextStyle(
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: widget.textStyle,
                     )
                   : const SizedBox(),
               const SizedBox(
@@ -137,10 +150,10 @@ class _BatteryIndicatorState extends State<BatteryIndicator> {
                           ? DefaultBatteryStatusType.low
                           : DefaultBatteryStatusType.normal,
                 ),
-                trackHeight: 12.0,
+                trackHeight: widget.size,
                 trackAspectRatio: 2.0,
                 curve: Curves.ease,
-                duration: const Duration(milliseconds: 300),
+                duration: widget.duration,
               ),
             ],
           );

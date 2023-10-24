@@ -13,11 +13,11 @@ It can detect if the device is charging or not and can turn battery level to red
 
 ## Installation
 
-Add `realtime_battery_indicator: ^1.0.1` in your project's pubspec.yaml:
+Add `realtime_battery_indicator: ^1.0.2` in your project's pubspec.yaml:
 
 ```yaml
 dependencies:
-  realtime_battery_indicator: ^1.0.1
+  realtime_battery_indicator: ^1.0.2
 ```
 
 ## Usage
@@ -36,11 +36,15 @@ BatteryIndicator();
 
 ### Custom Usage
 
-To hide battery level, use `showBatteryLevel`:
-
 ```dart
 BatteryIndicator(
-    showBatteryLevel: false;
+  showBatteryLevel: true,
+  size: 20.0,
+  textStyle: TextStyle(
+    fontSize: 20.0,
+    fontWeight: FontWeight.bold,
+  ),
+  duration: Duration(milliseconds: 200),
 );
 ```
 

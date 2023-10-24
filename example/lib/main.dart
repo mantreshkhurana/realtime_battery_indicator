@@ -66,6 +66,12 @@ class MyHomePage extends StatelessWidget {
             children: [
               BatteryIndicator(
                 showBatteryLevel: false,
+                size: 20.0,
+                textStyle: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                duration: Duration(milliseconds: 200),
               ),
             ],
           ),

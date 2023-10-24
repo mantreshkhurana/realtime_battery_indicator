@@ -1,6 +1,7 @@
 import 'battery_status_type.dart';
 import 'index.dart';
 
+/// [DefaultBatteryStatus] is a class that displays the battery level and status.
 class DefaultBatteryStatus {
   const DefaultBatteryStatus({
     required int value,

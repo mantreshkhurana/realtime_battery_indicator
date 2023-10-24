@@ -1,6 +1,7 @@
 import 'battery_status.dart';
 import 'index.dart';
 
+/// A widget that displays the battery level and status.
 class DefaultBatteryIndicator extends StatelessWidget {
   const DefaultBatteryIndicator({
     super.key,
@@ -11,14 +12,19 @@ class DefaultBatteryIndicator extends StatelessWidget {
     this.duration = const Duration(seconds: 1),
   }) : assert(trackAspectRatio >= 1, 'width:height must >= 1');
 
+  /// The battery status.
   final DefaultBatteryStatus status;
 
+  /// The height of the track.
   final double trackHeight;
 
+  /// The width of the track.
   final double trackAspectRatio;
 
+  /// The curve of the animation.
   final Curve curve;
 
+  /// The duration of the animation.
   final Duration duration;
 
   @override
